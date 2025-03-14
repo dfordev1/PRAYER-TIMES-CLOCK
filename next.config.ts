@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  distDir: process.env.NODE_ENV === "production" ? "build" : ".next",
+  distDir: ".next", // Ensure this is always ".next" for Vercel
   images: {
     domains: [
       "source.unsplash.com",
@@ -30,6 +30,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  output: "standalone", // Add this to ensure all necessary files are included in the build
 };
 
 export default nextConfig;
