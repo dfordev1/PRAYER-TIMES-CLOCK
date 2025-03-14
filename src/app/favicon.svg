@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#312e81" />
+    </linearGradient>
+    <radialGradient id="circleGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#312e81" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#4338ca" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.4" />
+    </radialGradient>
+  </defs>
+
+  <!-- Main background -->
+  <circle cx="50" cy="50" r="48" fill="url(#bgGradient)" stroke="#c4b5fd" stroke-width="1.5" />
+
+  <!-- Clock face -->
+  <circle cx="50" cy="50" r="40" fill="url(#circleGradient)" stroke="#c4b5fd" stroke-width="0.5" />
+
+  <!-- Prayer time sections (stylized) -->
+  <path d="M50,50 L50,10 A40,40 0 0,1 85,50 Z" fill="#4f46e5" opacity="0.7" /> <!-- Morning section -->
+  <path d="M50,50 L85,50 A40,40 0 0,1 50,90 Z" fill="#7c3aed" opacity="0.7" /> <!-- Afternoon section -->
+  <path d="M50,50 L50,90 A40,40 0 0,1 15,50 Z" fill="#312e81" opacity="0.7" /> <!-- Evening section -->
+  <path d="M50,50 L15,50 A40,40 0 0,1 50,10 Z" fill="#1e1b4b" opacity="0.7" /> <!-- Night section -->
+
+  <!-- Hour markers (simplified) -->
+  <g stroke="#fff" stroke-width="0.8">
+    <!-- 12, 6 -->
+    <line x1="50" y1="12" x2="50" y2="20" />
+    <line x1="50" y1="80" x2="50" y2="88" />
+
+    <!-- 3, 9 -->
+    <line x1="80" y1="50" x2="88" y2="50" />
+    <line x1="12" y1="50" x2="20" y2="50" />
+  </g>
+
+  <!-- Prayer time markers (small dots) -->
+  <circle cx="50" cy="15" r="2" fill="#fff" /> <!-- Fajr -->
+  <circle cx="72" cy="28" r="2" fill="#fff" /> <!-- Sunrise -->
+  <circle cx="85" cy="50" r="2" fill="#fff" /> <!-- Dhuhr -->
+  <circle cx="72" cy="72" r="2" fill="#fff" /> <!-- Asr -->
+  <circle cx="50" cy="85" r="2" fill="#fff" /> <!-- Maghrib -->
+  <circle cx="28" cy="72" r="2" fill="#fff" /> <!-- Isha -->
+
+  <!-- Current time hand -->
+  <line x1="50" y1="50" x2="50" y2="20" stroke="#fff" stroke-width="2" />
+
+  <!-- Center dot -->
+  <circle cx="50" cy="50" r="3" fill="#fff" />
+
+  <!-- Crescent moon symbol (stylized for Islamic theme) -->
+  <path d="M60,30 A20,20 0 0,0 45,40 A12,12 0 0,0 60,30" fill="#fff" opacity="0.9" />
+</svg>
